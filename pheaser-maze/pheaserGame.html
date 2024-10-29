@@ -6,34 +6,117 @@
     <title>Lost Spaceship</title>
     <link rel="stylesheet" href="">
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <style>
+        /* Basic styles for the interface */
+        body{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
 
+        .interface {
+            display: flex;
+            justify-content: space-between;
+
+            margin: 20px;
+        }
+        .navbar {
+            font-size: 18px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-  <script>
-const urlParams = new URLSearchParams(window.location.search);
-const characterSrc = urlParams.get('character');
-console.log(characterSrc);
- const config = {
-    type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    scene: {
-        preload: preload,
-        create: create
+
+<div class="interface">
+    <div class="navbar">Score: 0</div>
+    <button id="restart">Restart Game</button>
+    <select>
+        <option value="1">Level 1</option>
+        <option value="2">Level 2</option>
+        <option value="3">Level 3</option>
+    </select>
+</div>
+<div class="gameContainer"></div>
+
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const characterSrc = urlParams.get('character');
+
+    console.log(characterSrc);
+
+    let score = 0; // Initialize the score
+
+    // Update the score display
+    function updateScore(newScore) {
+        score = newScore;
+        document.getElementById('score').innerText = `Score: ${score}`;
     }
-};
 
-const game = new Phaser.Game(config);
+    const config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 600,
+        parent: document.querySelector('.gameContainer'),
+        physics: {
+        default: 'arcade',
+        arcade: {
+            debug: false // Set to true if you want to see physics debugging
+        }
+        },
 
-function preload() {
-    this.load.image('character', characterSrc); // Preload the character image using its src
+        scene: {
+            preload: preload,
+            create: create,
+            update: update
+        }
+    };
+
+    const game = new Phaser.Game(config);
+
+    function preload() {
+        this.load.image('character', characterSrc); // Preload the character image using its src
+    }
+
+    function create() {
+      // Set the world bounds
+        this.physics.world.setBounds(0, 0, this.scale.width, this.scale.height);
+
+// Create a character sprite with physics enabled
+        this.character = this.physics.add.sprite(100, 100, 'character')
+
+        // Enable collision with world bounds
+        this.character.setCollideWorldBounds(true);
+        this.cursors = this.input.keyboard.createCursorKeys();
+
+
+        document.getElementById('restart').addEventListener('click', () => {
+            updateScore(0); // Reset score
+            this.scene.restart(); // Restart the Phaser scene
+        });
+
+    }
+
+
+function update() {
+    const speed = 5;
+
+    if (this.cursors.left.isDown) {
+        this.character.x -= speed;
+    }
+    if (this.cursors.right.isDown) {
+        this.character.x += speed;
+    }
+    if (this.cursors.up.isDown) {
+        this.character.y -= speed;
+    }
+    if (this.cursors.down.isDown) {
+        this.character.y += speed;
+    }
 }
 
-function create() {
-    this.add.sprite(400, 300, 'character'); // Add the image as a sprite to the game
-}
-
-  </script>
+</script>
 
 </body>
 </html>
