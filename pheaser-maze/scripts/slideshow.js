@@ -24,9 +24,9 @@ nextButton.addEventListener('click', nextSlide);
 previousButton.addEventListener('click', previousSlide);
 
 playButton.addEventListener('click', function() {
-  const chosenCharacter = slides[currentSlide].querySelector('p').innerText; // Get the name of the current slide
+  const chosenCharacterImage = slides[currentSlide].querySelector('img').src; // Get the source of the image
   // Redirect to the game page with the chosen character as a query parameter
-  window.location.href = `pheaserGame.html?character=${encodeURIComponent(chosenCharacter)}`;
+  window.location.href = `pheaserGame.html?character=${encodeURIComponent(chosenCharacterImage)}`;
 });
 
 // Show the first slide initially

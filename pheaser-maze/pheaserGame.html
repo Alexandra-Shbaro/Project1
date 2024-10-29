@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Spaceship</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+
+</head>
+<body>
+  <script>
+const urlParams = new URLSearchParams(window.location.search);
+const characterSrc = urlParams.get('character');
+console.log(characterSrc);
+ const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create
+    }
+};
+
+const game = new Phaser.Game(config);
+
+function preload() {
+    this.load.image('character', characterSrc); // Preload the character image using its src
+}
+
+function create() {
+    this.add.sprite(400, 300, 'character'); // Add the image as a sprite to the game
+}
+
+  </script>
+
+</body>
+</html>
