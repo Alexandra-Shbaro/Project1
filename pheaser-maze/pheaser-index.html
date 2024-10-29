@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Spaceship</title>
+    <link rel="stylesheet" href="">
+    <style>
+      .slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+
+}
+
+.flex{
+  display: flex;
+}
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slide p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+.column{
+  flex-direction: column;
+}
+.align-items{
+  align-items: center;
+}
+#nextButton {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+
+
+}
+    </style>
+</head>
+<body>
+  <section class="flex column align-items">
+  <div>Choose Your character to play</div>
+
+  <div class="flex">
+    <button id="previousButton">previous</button>
+
+  <div class="slideshow-container">
+    <div class="slide" id="slide1">
+      <img src="./../assets/images/vector_spaceships-01.png" alt="Image 1">
+      <p>Name 1</p>
+    </div>
+    <div class="slide" id="slide2">
+      <img src="./../assets/images/vector_spaceships-02.png" alt="Image 2">
+      <p>Name 2</p>
+    </div>
+    <div class="slide" id="slide3">
+      <img src="./../assets/images/vector_spaceships-03.png" alt="Image 3">
+      <p>Name 3</p>
+    </div>
+    <div class="slide" id="slide3">
+      <img src="./../assets/images/vector_spaceships-04.png" alt="Image 3">
+      <p>Name 3</p>
+    </div>
+    <div class="slide" id="slide3">
+      <img src="./../assets/images/vector_spaceships-05.png" alt="Image 3">
+      <p>Name 3</p>
+    </div>
+  </div>
+  <button id="nextButton">next</button>
+
+  </div>
+  <button id="play">play</button>
+
+</section>
+
+
+<script src="slideshow.js"></script>
+
+</body>
+</html>
