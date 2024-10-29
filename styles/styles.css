@@ -61,3 +61,22 @@
 .symbol-item{
     text-align: center;
 }
+
+.play-now-section{
+    display:flex;
+    justify-content: center;
+    padding:25px;
+}
+
+.play-now-btn{
+    background-image: url(../assets/images/button.png);
+    height:80px;
+    width:200px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
