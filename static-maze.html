@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Spaceship</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <style>
+        /* Basic styles for the interface */
+        body{
+          display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .interface {
+            display: flex;
+            justify-content: space-between;
+
+            margin: 20px;
+        }
+        .navbar {
+            font-size: 18px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="interface">
+    <div class="navbar">Score: 0</div>
+    <button id="restart">Restart Game</button>
+    <select>
+        <option value="1">Level 1</option>
+        <option value="2">Level 2</option>
+        <option value="3">Level 3</option>
+    </select>
+</div>
+<div class="gameContainer"></div>
+
+<script src="./scripts/static.js"></script>
+
+
+</body>
+</html>
