@@ -1,24 +1,33 @@
-var number_of_star = 200;
+const numberOfStars = 100; // Number of stars
+    const body = document.body;
 
-var random_number = function(min, max){
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+    for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
 
-var createStars = function(){
-	var star_rotation = 'move_right;';
-	for(var i=0; i<number_of_star; i++){
-		rot= (star_rotation=='move_right;'?'move_left;':'move_right;');
-		var star_top = random_number(0,document.documentElement.clientHeight);
-		var star_left = random_number(0,document.documentElement.clientWidth);
-		var star_radius = random_number(0,4);
-		var  star_duration= random_number(6,16);
+        // Randomize size
+        const size = Math.random() * 5 + 2; // Size between 2px and 7px
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
 
-		document.body.innerHTML += "<div class='star' style='top: "+star_top+"px; left: "+star_left+"px; width: "+star_radius+"px; height: "+star_radius+"px; "+
-		"animation-name:"+star_rotation+"; animation-duration: "+star_duration+"s;'></div>";
+        // Randomize position
+        star.style.left = `${Math.random() * 100}vw`; // 0% to 100% of the viewport width
+        star.style.top = `${Math.random() * 100}vh`; // 0% to 100% of the viewport height
+
+        // Randomize animation direction
+        if (Math.random() > 0.5) {
+            star.style.animationName = 'move_right';
+        } else {
+            star.style.animationName = 'move_left';
+        }
+
+        // Randomize animation duration
+        star.style.animationDuration = `${Math.random() * 3 + 2}s`; // Between 2s and 5s
+
+        body.appendChild(star);
 	}
-};
 
-createStars();
+//for scrolling
 
 document.querySelectorAll('.nav-item a').forEach(link => {
 	link.addEventListener('click', (e) => {
