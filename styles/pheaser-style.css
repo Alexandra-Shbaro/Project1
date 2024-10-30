@@ -6,6 +6,11 @@
 
 }
 
+body {
+  background-color: #050724;
+  color: white;
+}
+
 .flex {
   display: flex;
 }
@@ -33,13 +38,15 @@
   align-items: center;
 }
 
-#nextButton {
+
+
+.previous-next {
   cursor: pointer;
   background: none;
   /* No background */
   border: none;
-  /* No border */
-
+  color: white;
+  font-size: medium;
 
 }
 
