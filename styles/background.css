@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Jura|Rajdhani');
 
-body{background-color: #000;}
+body{background-color:#050724 ;}
 .star{display: block; background-color: #fff; position: absolute; border-radius: 100%; animation-timing-function: linear;animation-iteration-count: infinite;}
 
 @keyframes move_right {
