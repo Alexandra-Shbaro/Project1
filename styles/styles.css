@@ -1,68 +1,101 @@
-.nav {
-  background-color: var(--purple-header);
-  font-family: 'Retropix';
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-  text-align: center;
-  margin-bottom:  10px;
+/*navbar*/
+
+.navbar {
+    background-color: var(--purple-header);
+    font-family: 'Retropix';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav a {
-  color: white;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 5px 10px;
-
+.logo {
+    display: flex;
+    flex: 0.25;
+    height: 60px;
+    align-items: center;
+    padding-left: 20px;
 }
 
-.nav a:hover {
-  color: var(--planet-color)
+.logo img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
 }
+
+.nav-items {
+    display: flex;
+    gap: 120px;
+    list-style-type: none;
+    flex: 2;
+    justify-content: center;
+    margin-left: -250px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar a:hover {
+    color: var(--planet-color);
+}
+
+.play{
+    font-family: "Retropixel",sans-serif;
+}
+
+/*hero section*/
 
 .hero-section {
-  color: white;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px; /* Space below the navbar */
+    padding: 20px; 
+    width:100%;
+}
+
+.hero-opening{
+    text-align: center;
+    margin-top:250px;
+    width:100%;
 
 }
 
-.hero-characters {
-  background-image: url('./../assets/images/hero-bg-nostars.png');
-  margin-top: 50px;
-  background-size: cover;
-  height: 80vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+.hero-opening > h1{
+    font-size: 3rem;
 }
 
-.hero-section h1 {
-  text-align: center;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.purple-blocks{
+    width:100%;
+    
 }
 
-.purple-blocks {
-  background-image: url('./../assets/images/purple-block.png');
-  background-size: cover;
-  height: fit-content;
-  height: 20vh;
-  background-position: center;
-  background-repeat: no-repeat;
+.purple-blocks img{
+    width:100%;
+    object-fit: cover;
 }
+
+/*how to play*/
 
 .how-to-play {
     display: flex;
     flex-direction: column;
 }
-.how-to-play{
-    display:flex;
-    flex-direction:column;
+
+.how-to-play {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -72,11 +105,11 @@
     padding: 20px;
     margin-top: 1.5rem;
     font-size: 80px;
-    display:flex;
+    display: flex;
     justify-content: center;
     padding: 20px;
     margin-top: 1.5rem;
-    font-size: 80px; 
+    font-size: 80px;
     color: white;
 }
 
@@ -86,18 +119,18 @@
     align-items: center;
     font-size: 10rem;
     width: 80%;
-} 
+}
 
 .neon {
     height: 90%;
     width: auto;
-    font-size: 10rem; 
-    width:80%;
+    font-size: 10rem;
+    width: 80%;
 }
 
-.neon{
-    height:90%;
-    width: auto; 
+.neon {
+    height: 90%;
+    width: auto;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -107,8 +140,8 @@
     max-height: 100%;
     width: auto;
     height: auto;
-    width: auto; 
-    height: auto; 
+    width: auto;
+    height: auto;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -122,12 +155,13 @@
 .game-pic-second>img {
     border-radius: 20px;
 }
-.game-pic >img{
-  border-radius: 20px; 
-  border: 5px solid var(--planet-color);
+
+.game-pic>img {
+    border-radius: 20px;
+    border: 5px solid var(--planet-color);
 }
 
-.game-pic-second >img{
+.game-pic-second>img {
     border-radius: 20px;
     border: 5px solid var(--planet-color);
 }
@@ -146,6 +180,8 @@
     text-align: center;
 }
 
+/*play now*/
+
 .play-now-section {
     display: flex;
     justify-content: center;
@@ -162,9 +198,11 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    cursor:pointer;
+    cursor: pointer;
     user-select: none;
 }
+
+/*spacecrew*/
 
 .space-crew {
     display: flex;
@@ -172,7 +210,7 @@
     align-items: center;
     padding: 20px;
     width: 100%;
-    gap:70px;
+    gap: 70px;
 }
 
 .crew-title {
@@ -204,7 +242,7 @@
     align-items: center;
 }
 
-.box-title{
+.box-title {
     font-size: 35px;
 }
 
@@ -215,59 +253,60 @@
 
 .box {
     color: white;
-    min-width:349px;
-    min-height:217px;
-    max-width:349px;
-    max-height:217px;
-    padding:25px;
+    min-width: 349px;
+    min-height: 217px;
+    max-width: 349px;
+    max-height: 217px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap:27px;
+    gap: 27px;
 }
 
-.spacecrew-purple{
+.spacecrew-purple {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.spacecrew-blue-beige{
-    display:flex;
+.spacecrew-blue-beige {
+    display: flex;
     justify-content: space-between;
-    gap:150px;
+    gap: 150px;
 }
 
-.spacecrew-blue{
-    display:flex;
-    gap:10px;
+.spacecrew-blue {
+    display: flex;
+    gap: 10px;
     align-items: center;
 }
 
-.spacecrew-beige{
-    display:flex;
+.spacecrew-beige {
+    display: flex;
     flex-direction: row-reverse;
-    gap:10px;
+    gap: 10px;
     align-items: center;
 }
 
-.spacecrew-pink-green{
-    display:flex;
+.spacecrew-pink-green {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:300px;
+    gap: 300px;
 }
 
-.pink-green-characters{
-    display:flex;
+.pink-green-characters {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.character{
-    width:fit-content;
+.character {
+    width: fit-content;
 }
+
 .purple-box {
     box-shadow: 0px 0px 10px 6px rgba(92, 50, 161, 0.9);
     background-color: var(--purple-character);
@@ -293,15 +332,18 @@
     background-color: var(--green-character);
 }
 
-footer{
+.symbol-item {
+    text-align: center;
+}
+
+/*footer*/
+
+footer {
     display: flex;
     justify-content: center;
     color: white;
-    padding:80px;
+    padding: 80px;
     font-size: 30px;
-    width:50%;
+    width: 50%;
 }
 
-.symbol-item{
-    text-align: center;
-}

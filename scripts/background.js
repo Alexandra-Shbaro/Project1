@@ -1,4 +1,4 @@
-var number_of_star = 150;
+var number_of_star = 200;
 
 var random_number = function(min, max){
 		return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -19,3 +19,14 @@ var createStars = function(){
 };
 
 createStars();
+
+document.querySelectorAll('.nav-item a').forEach(link => {
+	link.addEventListener('click', (e) => {
+		e.preventDefault();
+		const targetClass = link.getAttribute('data-scroll');
+		const targetSection = document.querySelector(targetClass);
+		if (targetSection) {
+			targetSection.scrollIntoView({ behavior: 'smooth' });
+		}
+	});
+});

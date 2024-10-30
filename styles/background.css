@@ -5,19 +5,19 @@ body{background-color:#050724 ;}
 
 @keyframes move_right {
    from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+    to   { transform: rotate(400deg) translateX(8px) rotate(-400deg); }
 }
 
 @keyframes move_left {
    from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
-    to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+    to   { transform: rotate(-400deg) translateX(8px) rotate(400deg); }
 }
 
-/* the intro panel */
+/* the intro panel 
 .intro{color:#63baf7; margin: 1em; font-family: Jura; font-size: 11pt}
 .intro h3{font-size: 16pt; margin-bottom: 0}
 .intro ul {padding-left: .3em;}
 .intro li {list-style-type: none; margin-left: .5em}
 .intro .customization-panel{display: flex;flex-wrap: wrap;}
 .intro .customization-title{flex-basis : 100%;padding: 10px 0; font-size: 14pt; text-shadow: 0 0 .3em #63baf7; color: #fff;}
-.intro .customization-js{margin-right: 2em;}
+.intro .customization-js{margin-right: 2em;}*/
