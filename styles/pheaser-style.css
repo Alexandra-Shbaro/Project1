@@ -1,0 +1,63 @@
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slide p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.align-items {
+  align-items: center;
+}
+
+#nextButton {
+  cursor: pointer;
+  background: none;
+  /* No background */
+  border: none;
+  /* No border */
+
+
+}
+
+/* Basic styles for the interface */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interface {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 20px;
+}
+
+.navbar {
+  font-size: 18px;
+  padding: 5px;
+}

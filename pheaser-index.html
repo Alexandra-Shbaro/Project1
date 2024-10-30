@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Spaceship</title>
+    <link rel="stylesheet" href="./../styles/pheaser-style.css">
+
+</head>
+<body>
+  <section class="flex column align-items">
+  <div><h1>Choose Your character to play</h1></div>
+
+  <div class="flex">
+    <button id="previousButton">➤</button>
+
+  <div class="slideshow-container">
+    <div class="slide" id="slide1">
+      <img src="./assets/images/vector_spaceships-01.png" alt="Image 1">
+      <p>Name 1</p>
+    </div>
+    <div class="slide" id="slide2">
+      <img src="./assets/images/vector_spaceships-02.png" alt="Image 2">
+      <p>Name 2</p>
+    </div>
+    <div class="slide" id="slide3">
+      <img src="./assets/images/vector_spaceships-03.png" alt="Image 3">
+      <p>Name 3</p>
+    </div>
+    <div class="slide" id="slide3">
+      <img src="./assets/images/vector_spaceships-04.png" alt="Image 3">
+      <p>Name 3</p>
+    </div>
+    <div class="slide" id="slide3">
+      <img src="./assets/images/vector_spaceships-05.png" alt="Image 3">
+      <p>Name 3</p>
+    </div>
+  </div>
+  <button id="nextButton">➤</button>
+
+  </div>
+  <button id="play">play</button>
+
+</section>
+
+<div class="interface">
+  <div class="navbar">Score: 0</div>
+  <button id="restart">Restart Game</button>
+  <select>
+      <option value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+  </select>
+</div>
+<div class="gameContainer"></div>
+<script src="./pheaser-maze/scripts/randomized.js"></script>
+
+
+<script src="./pheaser-maze/scripts/slideshow.js"></script>
+
+</body>
+</html>
