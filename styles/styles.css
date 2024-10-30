@@ -1,0 +1,56 @@
+.nav {
+  background-color: var(--purple-header);
+  font-family: 'Retropix';
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 10px;
+
+}
+
+.nav a:hover {
+  color: var(--planet-color)
+}
+
+.hero-section {
+  color: white;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.hero-characters {
+  background-image: url('./../assets/images/hero-bg.png');
+  margin-top: 50px;
+  background-size: cover;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-section h1 {
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.purple-blocks {
+  background-image: url('./../assets/images/purple-block.png');
+  background-size: cover;
+  height: fit-content;
+  height: 20vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
