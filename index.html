@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost Spaceship</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/utilities.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/background.css">
     <script src="./scripts/background.js" defer></script>
@@ -16,15 +17,22 @@
 
     <!--Navbar-->
     <nav class="navbar">
-        <ul class="nav">
-            <li>About</li>
-            <li>Our Story</li>
-            <li>Crew</li>
-            <li><button class="play-btn">PLAY NOW </button></li>
+        <ul class="nav flex">
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#our-story-section">Our Story</a></li>
+            <li><a href="#crew-section">Crew</a></li>
+            <li><a href="">PLAY NOW</a></li>
         </ul>
+
     </nav>
 
     <!--Hero Section-->
+    <section class ="hero-section flex column">
+        <div class="hero-characters"><h1>Explore Space and Make Cosmic Friends</h1></div>
+        <div></div>
+        <div class="purple-blocks"></div>
+    </section>
+
     <section class="hero-section">
         <div class="hero-characters"></div>
         <h1></h1>
@@ -154,8 +162,11 @@
 
     <!--Footer-->
     <footer>
-        <p>Copyright 2024  ©</p>
+       <p>Copyright 2024  ©</p>
     </footer>
-</body>
 
+
+</body>
 </html>
+    
+
