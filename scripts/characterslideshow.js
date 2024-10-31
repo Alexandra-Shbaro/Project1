@@ -24,28 +24,6 @@ function previousSlide() {
 nextButton.addEventListener('click', nextSlide);
 previousButton.addEventListener('click', previousSlide);
 
-// playButton.onclick = function () {
-//   const nameInput = document.getElementById("nameInput").value;
-
-//   // Find the selected character based on the currently visible slide
-//   let selectedCharacter = "";
-//   slides.forEach(slide => {
-//     if (slide.style.display === 'block') { 
-//       selectedCharacter = slide.querySelector("img").getAttribute("src"); // Get the src of the image
-//     }
-//   });
-
-//   if (nameInput.trim() === "") {
-//     errorMessage.style.display = "block";
-//   } else {
-//     errorMessage.style.display = "none";
-    
-//     // Redirect to the game page with username and character as URL parameters
-//     const url = `game.html?username=${encodeURIComponent(nameInput)}&character=${encodeURIComponent(selectedCharacter)}`;
-//     window.location.href = url;
-//   }
-// };
-// Assume `slides` is an array of all slide elements and `currentSlide` tracks the current slide index
 playButton.addEventListener('click', function() {
   const nameInput = document.getElementById("nameInput").value;
   const errorMessage = document.getElementById("errorMessage");
@@ -59,7 +37,7 @@ playButton.addEventListener('click', function() {
     const chosenCharacterImage = slides[currentSlide].querySelector('img').src;
     
     // Redirect to the game page with username and character as URL parameters
-    const url = `./game.html?username=${encodeURIComponent(nameInput)}&character=${encodeURIComponent(chosenCharacterImage)}`;
+    const url = `./game.html?nameInput=${encodeURIComponent(nameInput)}&character=${encodeURIComponent(chosenCharacterImage)}`;
     window.location.href = url;
   }
 });

@@ -9,11 +9,21 @@
 body {
   background-color: #050724;
   color: white;
+  font-family: "Retropix";
+  font-size: 20px;
 }
+
 
 .flex {
   display: flex;
 }
+
+#nameInput{
+  border-radius: 8px;
+  height:30px;
+}
+
+
 
 .slide {
   display: none;
