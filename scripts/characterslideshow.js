@@ -4,6 +4,7 @@ const totalSlides = slides.length;
 const nextButton = document.getElementById('nextButton');
 const previousButton = document.getElementById('previousButton');
 const playButton = document.getElementById('play');
+const errorMessage = document.getElementById("errorMessage");
 
 function showSlide(index) {
   slides.forEach(slide => (slide.style.display = 'none'));
@@ -23,14 +24,14 @@ function previousSlide() {
 nextButton.addEventListener('click', nextSlide);
 previousButton.addEventListener('click', previousSlide);
 
-document.getElementById("play").onclick = function () {
+playButton.onclick = function () {
   const nameInput = document.getElementById("nameInput").value;
-  const errorMessage = document.getElementById("errorMessage");
 
+  // Find the selected character based on the currently visible slide
   let selectedCharacter = "";
   slides.forEach(slide => {
     if (slide.style.display === 'block') { 
-      selectedCharacter = slide.querySelector("p").textContent.trim(); 
+      selectedCharacter = slide.querySelector("p").textContent.trim();
     }
   });
 
@@ -38,8 +39,8 @@ document.getElementById("play").onclick = function () {
     errorMessage.style.display = "block";
   } else {
     errorMessage.style.display = "none";
-
-    // Redirect to the new page with parameters
+    
+    // Redirect to the game page with username and character as URL parameters
     const url = `game.html?username=${encodeURIComponent(nameInput)}&character=${encodeURIComponent(selectedCharacter)}`;
     window.location.href = url;
   }
@@ -47,17 +48,3 @@ document.getElementById("play").onclick = function () {
 
 // Show the first slide initially
 showSlide(currentSlide);
-
-// Code to update the welcome message in game.html
-function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
-
-const welcomeMessageElement = document.getElementById('welcomeMessage');
-const username = getQueryParam('username');
-
-// If we're on game.html and welcomeMessage exists, update it
-if (welcomeMessageElement && username) {
-  welcomeMessageElement.textContent = `Welcome, ${username}`;
-}
