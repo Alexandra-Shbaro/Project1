@@ -38,7 +38,7 @@ playButton.addEventListener('click', function() {
     
     // Redirect to the game page with username and character as URL parameters
     const url = `./game.html?nameInput=${encodeURIComponent(nameInput)}&character=${encodeURIComponent(chosenCharacterImage)}`;
-    window.location.href = url;
+    window.location.href = "game.html";
   }
 });
 
