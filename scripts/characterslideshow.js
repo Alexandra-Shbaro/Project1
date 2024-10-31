@@ -2,7 +2,7 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 const nextButton = document.getElementById('nextButton');
-const previousButton = document.getElementById('previousButton'); // Make sure you have this button in your HTML
+const previousButton = document.getElementById('previousButton');
 const playButton = document.getElementById('play');
 
 function showSlide(index) {
@@ -23,30 +23,41 @@ function previousSlide() {
 nextButton.addEventListener('click', nextSlide);
 previousButton.addEventListener('click', previousSlide);
 
-onclick="toggleDiv()"
-function toggleDiv() {
-  const div = document.getElementById("before-play");
-  if (div.style.display === "none") {
-    div.style.display = "block"; // Show the div
-  } else {
-    div.style.display = "none";   // Hide the div
-  }
-}
-
 document.getElementById("play").onclick = function () {
   const nameInput = document.getElementById("nameInput").value;
   const errorMessage = document.getElementById("errorMessage");
+
+  let selectedCharacter = "";
+  slides.forEach(slide => {
+    if (slide.style.display === 'block') { 
+      selectedCharacter = slide.querySelector("p").textContent.trim(); 
+    }
+  });
 
   if (nameInput.trim() === "") {
     errorMessage.style.display = "block";
   } else {
     errorMessage.style.display = "none";
-    console.log("Starting the game for", nameInput);
 
-    console.log("Selected character image source:", slides[currentSlide].querySelector("img").src);
+    // Redirect to the new page with parameters
+    const url = `game.html?username=${encodeURIComponent(nameInput)}&character=${encodeURIComponent(selectedCharacter)}`;
+    window.location.href = url;
   }
 };
 
-
 // Show the first slide initially
 showSlide(currentSlide);
+
+// Code to update the welcome message in game.html
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+const welcomeMessageElement = document.getElementById('welcomeMessage');
+const username = getQueryParam('username');
+
+// If we're on game.html and welcomeMessage exists, update it
+if (welcomeMessageElement && username) {
+  welcomeMessageElement.textContent = `Welcome, ${username}`;
+}
