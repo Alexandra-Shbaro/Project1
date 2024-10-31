@@ -179,15 +179,6 @@
     align-items: center;
 }
 
-.section-parallax {
-    background-image: inherit; /* Pulls the body's background */
-    background-attachment: scroll; /* Moves with the content */
-    background-position: center;
-    background-size: cover;
-    background-color: var(--navy-color);
-    height: 100vh; /* Adjust height as needed */
-}
-
 .planet {
     background-image: url('../assets/images/planet.png');
     width: 650px;
@@ -327,20 +318,12 @@
 .game-pic>img {
     border-radius: 20px;
     border: 5px solid var(--planet-color);
+    width: 500px;
+    height:300px;
 }
 
 .game-pic-second>img {
     border-radius: 20px;
-}
-
-.game-pic>img {
-    border-radius: 20px;
-    border: 5px solid var(--planet-color);
-}
-
-.game-pic-second>img {
-    border-radius: 20px;
-    border: 5px solid var(--planet-color);
 }
 
 .symbols {
