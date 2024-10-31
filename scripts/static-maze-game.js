@@ -102,12 +102,20 @@ const coinPositions = {
   { x: 250, y: 120 },
   ],
 };
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Retrieve the character parameter from the URL
+const character = getQueryParam('character') || 'assets/images/game-img/green.png'; // Default character if none provided
+const username = getQueryParam('username');
 
 function preload() {
-  this.load.image('player', 'assets/images/vector_spaceships-01.png');
-  this.load.image('coin', 'assets/images/star.png');
-  this.load.image('spaceship', 'assets/images/spaceship.png');
-  this.load.image('enemy', 'assets/images/enemy.png'); // Load enemy image
+  this.load.image('player', character);
+  this.load.image('coin', 'assets/images/game-img/star.png');
+  this.load.image('spaceship', 'assets/images/game-img/spaceship.png');
+  this.load.image('enemy', 'assets/images/game-img/enemy.png');
 }
 
 function create() {
