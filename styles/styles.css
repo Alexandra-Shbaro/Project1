@@ -155,12 +155,19 @@
 
 .purple-blocks {
     width: 100%;
-
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .purple-blocks img {
     width: 100%;
     object-fit: cover;
+}
+
+.parallax{
+    
 }
 
 /* Galatic Quest*/
@@ -170,6 +177,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.section-parallax {
+    background-image: inherit; /* Pulls the body's background */
+    background-attachment: scroll; /* Moves with the content */
+    background-position: center;
+    background-size: cover;
+    background-color: var(--navy-color);
+    height: 100vh; /* Adjust height as needed */
 }
 
 .planet {

@@ -49,4 +49,5 @@ body {
     overflow-x: hidden;
     background-color: var(--navy-color);
     font-family: 'Retropixel', sans-serif;
+    background-attachment: fixed;
 }
