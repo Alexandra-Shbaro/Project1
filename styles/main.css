@@ -1,0 +1,53 @@
+:root {
+    --navy-color: #050724;
+    --purple-header: #84029b;
+    --planet-color: #ffae3b;
+    --inner-buton: #cfa1ff;
+    --border-button: #d3b5ff;
+
+    --purple-character: #A57FDB;
+    --pruple-stroke: #5D32A1;
+    --blue-character: #AFCBEE;
+    --blue-stroke: #81A9DB;
+    --pink-character: #F5BACD;
+    --pink-stroke: #DE90A9;
+    --green-character: #9AD6C3;
+    --green-stroke: #67B69D;
+    --beige-character: #ECE3CE;
+    --beige-stroke: #E0D1AF;
+    --beige-font: #AA9E82;
+
+}
+
+@font-face {
+    font-family: 'Retropix';
+    src: url('../assets/fonts/retropix.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Retropixel';
+    src: url('../assets/fonts/retro-pixel-retro-pixel-svg-400.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--navy-color);
+    font-family: 'Retropix', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--navy-color);
+    font-family: 'Retropixel', sans-serif;
+    background-attachment: fixed;
+}

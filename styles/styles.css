@@ -1,0 +1,817 @@
+/* Navbar */
+
+.navbar {
+    background-color: var(--purple-header);
+    font-family: 'Retropix';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    display: flex;
+    flex: 0.25;
+    height: 60px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+}
+
+.nav-items {
+    display: flex;
+    gap: 120px;
+    list-style-type: none;
+    flex: 2;
+    justify-content: center;
+    margin-left: -250px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar a:hover {
+    color: var(--planet-color);
+}
+
+.play {
+    font-family: "Retropixel", sans-serif;
+}
+
+
+/* Mobile Navbar */
+
+.mobile-navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-header);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 10;
+}
+
+.mobile-navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-navbar ul li {
+    margin: 20px 0;
+}
+
+.mobile-navbar ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Burger Menu Icon */
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.burger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Hero Section*/
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 20px;
+    width: 100%;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-opening {
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+
+}
+
+.hero-opening>h1 {
+    font-size: 3rem;
+}
+
+.purple-blocks {
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.purple-blocks img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.parallax{
+    
+}
+
+/* Galatic Quest*/
+
+.galatic-quest {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planet {
+    background-image: url('../assets/images/planet.png');
+    width: 650px;
+    height: 400px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    padding-left: 15px;
+
+}
+
+.planet-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-story {
+    display: flex;
+    align-items: center;
+}
+
+.second-story {
+    display: flex;
+    align-items: center;
+}
+
+.story {
+    color: white;
+    font-size: 30px;
+    font-family: "Retropix";
+}
+
+.story-part {
+    flex: 1;
+    padding: 10px;
+
+}
+
+.story img {
+    height: 110px;
+    width: 160px;
+}
+
+.second-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story img {
+    height: 140px;
+    width: 160px;
+}
+
+.upper {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.story-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+/* How to Play */
+
+.how-to-play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.how-to-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 1.5rem;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 1.5rem;
+    font-size: 80px;
+    color: white;
+}
+
+.how-to {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10rem;
+    gap: 20px;
+    position: relative;
+}
+
+.neon {
+    height: 400px;
+    width: auto;
+    width: 10px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 23px 1px rgba(255, 255, 255, 0.9);
+}
+
+
+.game-pic {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.game-pic>img {
+    border-radius: 20px;
+    border: 5px solid var(--planet-color);
+    width: 500px;
+    height:300px;
+}
+
+.game-pic-second>img {
+    border-radius: 20px;
+}
+
+.symbols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 20px;
+    color: white;
+    width: 60%;
+}
+
+.symbol-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-family: "Retropix";
+    font-size: 20px;
+    gap: 30px;
+}
+
+.symbol-item img {
+    height: 70px;
+    width: 70px;
+}
+
+/* Play Now */
+
+.play-now-section {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.play-now-btn {
+    background-image: url(../assets/images/button.png);
+    height: 80px;
+    width: 200px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Spacecrew */
+
+.space-crew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    gap: 70px;
+}
+
+.crew-title {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+    align-items: center;
+}
+
+.rocket>img {
+    width: 120px;
+    height: 120px;
+}
+
+.rocket {
+    width: fit-content;
+}
+
+.title {
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+
+.characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-title {
+    font-size: 35px;
+}
+
+.box-description {
+    font-family: 'Retropix';
+    font-size: 27px;
+}
+
+.box {
+    color: white;
+    min-width: 349px;
+    min-height: 217px;
+    max-width: 349px;
+    max-height: 217px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 27px;
+}
+
+
+.spacecrew {
+    padding: 15px;
+
+}
+
+.spacecrew-purple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spacecrew-blue-beige {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+.spacecrew-blue {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.spacecrew-beige {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: center;
+}
+
+.spacecrew-pink-green {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 300px;
+}
+
+.pink-green-characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacecrew-pink-green .character {
+    display: none;
+}
+
+.character {
+    width: fit-content;
+}
+
+.purple-box {
+    box-shadow: 0px 0px 10px 8px rgba(92, 50, 161, 0.9);
+    background-color: var(--purple-character);
+}
+
+.blue-box {
+    box-shadow: 0px 0px 10px 8px rgba(129, 169, 219, 0.9);
+    background-color: var(--blue-character);
+}
+
+.beige-box {
+    box-shadow: 0px 0px 10px 8px rgba(224, 209, 175, 0.9);
+    background-color: var(--beige-character);
+}
+
+.pink-box {
+    box-shadow: 0px 0px 10px 8px rgba(222, 144, 168, 0.9);
+    background-color: var(--pink-character);
+}
+
+.green-box {
+    box-shadow: 0px 0px 10px 8px rgba(103, 182, 157, 0.9);
+    background-color: var(--green-character);
+}
+
+.symbol-item {
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--purple-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 50px;
+    font-size: 30px;
+    width: 100%;
+    margin-top: 50px;
+    z-index: 5000;
+}
+
+footer img {
+    height: 70px;
+    width: 70px;
+
+}
+
+.back-to-top {
+    height: 50px;
+    width: 50px;
+    background-color: var(--purple-character);
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.5s ease-in, 0.3s ease-out;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 8px var(--purple-character);
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Phones and Tablets */
+
+@media (max-width: 991px) {
+
+    /* ------------------------  General ------------------------- */
+    .how-to-play h1,
+    .crew-title .title {
+        font-size: 30px !important;
+    }
+
+    .planet-section h1 {
+        font-size: 14px;
+    }
+
+    /* ------------------------------ Navigation ---------------------------- */
+
+    nav {
+        display: none !important;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-navbar.open {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    /* ------------------------  Hero Section ------------------------- */
+
+    .hero-img img {
+        max-width: 90% !important;
+        transform: scale(1.1);
+    }
+
+    .game-pic:nth-child(even) {
+        display: none !important;
+    }
+
+    .hero-section h1 {
+        font-size: 20px !important;
+        line-height: 30px;
+    }
+
+    .hero-section {
+        padding: 0px;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+    }
+
+    .hero-opening {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .purple-blocks {
+        position: absolute;
+        bottom: 0;
+        height: 40%;
+        padding: 0;
+    }
+
+    .purple-blocks img {
+        height: 100%;
+    }
+
+
+    /* ------------------------  Planet Section ------------------------- */
+    .planet {
+        background-image: url('../assets/images/planet.png');
+        width: 350px;
+        height: 220px;
+        margin-top: 30px;
+    }
+
+    /* ------------------------  Story Section ------------------------- */
+    .story {
+        font-size: 18px;
+    }
+
+    .story img {
+        height: 70px;
+        width: 60px;
+    }
+
+    .first-left,
+    .second-right {
+        flex: 2
+    }
+
+    .story-wrapper {
+        margin-top: 30px;
+    }
+
+
+    /* ------------------------  How to Play Section ------------------------- */
+    .how-to {
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+
+    .neon {
+        height: 200px;
+    }
+
+    .game-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* -------------------- Symbols ------------------------ */
+
+    .symbols {
+        width: 100%;
+    }
+
+    .symbol-item p {
+        font-size: 14px;
+    }
+
+    .play-now-btn {
+        height: 50px;
+        width: 150px;
+        font-size: 14px;
+    }
+
+    /* ---------------------- Our Space Cew ---------------------- */
+
+
+    .space-crew {
+        padding: 0 5px;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .crew-title {
+        width: 100%;
+        padding: 0;
+        justify-content: center !important;
+        gap: 10px;
+    }
+
+    .rocket {
+        width: fit-content;
+    }
+
+    .rocket>img {
+        height: 55px;
+        width: 55px;
+    }
+
+    .box {
+        min-width: 100px !important;
+        min-height: 80px;
+        min-width: 100px !important;
+        flex: 2 !important;
+        min-height: 80px;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .box-title {
+        font-size: 20px;
+    }
+
+
+    .characters {
+        padding: 20px;
+        max-width: 100%;
+        gap: 0px;
+    }
+
+    .character img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .spacecrew {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 15px !important;
+    }
+
+    .box-description {
+        font-family: 'Retropix';
+        font-size: 14px;
+    }
+
+    .spacecrew-purple {
+        width: unset;
+        padding: 20px !important;
+        gap: 15px;
+    }
+
+    .spacecrew-blue-beige {
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .spacecrew-pink-green {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .spacecrew-green,
+    .spacecrew-pink {
+        display: flex;
+        gap: 20px;
+        padding: 20px !important;
+    }
+
+    .pink-green-characters {
+        display: none;
+    }
+
+    .spacecrew-pink-green .character {
+        display: block;
+    }
+
+
+    /* ---------------------- Footer --------------------- */
+
+    footer img {
+        display: none !important;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .back-to-top {
+        display: none;
+    }
+
+
+    * {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}
