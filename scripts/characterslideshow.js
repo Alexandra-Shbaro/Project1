@@ -22,6 +22,17 @@ function previousSlide() {
 
 nextButton.addEventListener('click', nextSlide);
 previousButton.addEventListener('click', previousSlide);
+
+onclick="toggleDiv()"
+function toggleDiv() {
+  const div = document.getElementById("before-play");
+  if (div.style.display === "none") {
+    div.style.display = "block"; // Show the div
+  } else {
+    div.style.display = "none";   // Hide the div
+  }
+}
+
 document.getElementById("play").onclick = function () {
   const nameInput = document.getElementById("nameInput").value;
   const errorMessage = document.getElementById("errorMessage");

@@ -25,7 +25,7 @@ let score = 0;
 let scoreText;
 let currentLevel = 1; // Track the current level
 
-// Define wall positions for each level
+// wall positions for each level
 const wallPositions = {
   1: [
     { x1: 0, y1: 575, x2: 300, y2: 575, color: 0xff0000 },
@@ -89,7 +89,7 @@ const wallPositions = {
   // Add more levels 
 };
 
-// Define coin positions for each level
+// coin positions for each level
 const coinPositions = {
   1: [
     { x: 200, y: 550 },
