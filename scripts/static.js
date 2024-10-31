@@ -46,10 +46,10 @@ const coinPositions = [
   { x: 250, y: 120 },
 ];
 function preload() {
-  this.load.image('player', './assets.images/vector_spaceships-01.png');
-  this.load.image('coin', './assets.images/star.png');
-  this.load.image('spaceship', './assets.images/spaceship.png');
-  this.load.image('enemy', './assets.images/enemy.png'); // Load enemy image
+  this.load.image('player', 'assets/images/vector_spaceships-01.png');
+  this.load.image('coin', 'assets.images/star.png');
+  this.load.image('spaceship', 'assets.images/spaceship.png');
+  this.load.image('enemy', 'assets/images/enemy.png'); // Load enemy image
 }
 
 function create() {
