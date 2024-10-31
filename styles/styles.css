@@ -166,10 +166,6 @@
     object-fit: cover;
 }
 
-.parallax{
-    
-}
-
 /* Galatic Quest*/
 
 .galatic-quest {
@@ -372,6 +368,7 @@
     font-size: 20px;
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
 }
 
 /* Spacecrew */

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/background.css">
     <script src="./scripts/background.js" type="text/javascript" defer></script>
+    <script src="./scripts/play-btn.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
@@ -22,7 +24,7 @@
             <li class="nav-item"><a data-scroll=".planet-section">Galactic Quest</a></li>
             <li class="nav-item"><a data-scroll=".how-to-play">How To Play</a></li>
             <li class="nav-item"><a data-scroll=".space-crew">Crew</a></li>
-            <li class="nav-item"><a data-scroll=".contact" class="play">PLAY NOW</a></li>
+            <li class="nav-item"><a href="intro-game.html" onclick="navigateToGame()" class="play" onclick="">PLAY NOW</a></li>
         </ul>
     </nav>
 
@@ -142,7 +144,7 @@
 
     <!--Play Now-->
     <section class="play-now-section">
-        <div class="play-now-btn">PLAY NOW</div>
+        <div onclick="navigateToGame()" class="play-now-btn">PLAY NOW</div>
     </section>
 
     <!--Our Space Crew-->
