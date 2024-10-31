@@ -108,11 +108,10 @@ function getQueryParam(param) {
 }
 
 // Retrieve the character parameter from the URL
-const character = getQueryParam('character') || 'assets/images/game-img/green.png'; // Default character if none provided
+const character = getQueryParam('character') || 'assets/images/game-img/blue.png'; // Default character if none provided
 const username = getQueryParam('username');
-
 function preload() {
-  this.load.image('player', character);
+  this.load.image('player', 'assets/images/game-img/blue.png');
   this.load.image('coin', 'assets/images/game-img/star.png');
   this.load.image('spaceship', 'assets/images/game-img/spaceship.png');
   this.load.image('enemy', 'assets/images/game-img/enemy.png');
