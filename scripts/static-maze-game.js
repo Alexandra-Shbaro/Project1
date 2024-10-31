@@ -107,11 +107,26 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-// Retrieve the character parameter from the URL
-const character = getQueryParam('character') || 'assets/images/game-img/blue.png'; // Default character if none provided
+// Retrieve the username from the URL
 const username = getQueryParam('username');
+
+// Update the welcome message with the username
+if (username) {
+  document.getElementById('welcomeMessage').textContent = `Welcome, ${username}`;
+}
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Retrieve the character image source and username from URL parameters
+const character = getQueryParam('character') || 'assets/images/game-img/blue.png'; // Default if none provided
+
+// Log to confirm retrieval
+console.log("Character Image Source:", character);
+console.log("Username:", username);
 function preload() {
-  this.load.image('player', 'assets/images/game-img/blue.png');
+  this.load.image('player', character);
   this.load.image('coin', 'assets/images/game-img/star.png');
   this.load.image('spaceship', 'assets/images/game-img/spaceship.png');
   this.load.image('enemy', 'assets/images/game-img/enemy.png');
